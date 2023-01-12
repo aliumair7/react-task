@@ -1,0 +1,1078 @@
+.filters-wrapper {
+    @extend .d-flex;
+    padding: 0 1.5rem 1rem;
+  
+    .filters {
+      @extend .d-flex, .align-items-end;
+  
+      .search-field {
+        width: 180px;
+        .ant-input-affix-wrapper {
+          input {
+            background: #f4f4f4;
+          }
+          .ant-input-prefix {
+            margin-right: 1rem;
+          }
+          .ant-input-suffix {
+            margin-left: 1rem;
+          }
+          .filters-field {
+            margin-right: 1rem;
+            margin-top: 1rem;
+          }
+          &.filters-input-style,
+          &.filters-select-style .ant-select-selector {
+            padding: 5px 16px;
+            background: #f4f4f4;
+            border-radius: 4px;
+            font-size: 14px;
+            border: 0;
+            height: 32px;
+          }
+          .filters-select-style {
+            .ant-select-selector {
+              display: flex;
+              align-items: center;
+              width: 104px;
+              height: 32px;
+            }
+          }
+  
+          .label-style {
+            font-weight: normal;
+            font-size: 12px;
+            color: #525252;
+            display: block;
+            margin-bottom: 10px;
+          }
+          .filters-btn-field button {
+            width: 32px;
+            height: 32px;
+            border: 1px solid #c4c4c4;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .actions {
+            @media screen and (max-width: 991px) {
+              margin-top: 1rem;
+            }
+            input {
+              background: #f4f4f4;
+              &::placeholder {
+                font-weight: normal;
+                color: #a8a8a8;
+              }
+            }
+          }
+        }
+      }
+      .filters-field {
+        margin-right: 1rem;
+        margin-top: 1rem;
+      }
+      .filters-input-style {
+        height: 32px;
+      }
+      .filters-input-style,
+      .filters-select-style .ant-select-selector {
+        padding: 4px 16px;
+        background: #f4f4f4 !important;
+        border-radius: 4px;
+        font-size: 14px;
+        border: 0;
+        height: 32px;
+        text-overflow: ellipsis;
+      }
+      .filters-select-style {
+        &.languages-select-width {
+          .ant-select-selector {
+            width: 170px;
+          }
+        }
+        &.dq-select-width {
+          // max-width: 300px;
+          width: 100%;
+          .ant-select-selector {
+            width: 100% !important;
+          }
+        }
+        &:not(.clients-filters-select) {
+          .ant-select-selector {
+            width: 110px;
+          }
+        }
+        &.clients-filters-select {
+          .ant-select-selector {
+            width: 200px;
+            padding-right: 26px;
+          }
+        }
+        .ant-select-selector {
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+        }
+      }
+      .ant-select-multiple .ant-select-selection-placeholder {
+        left: 16px;
+        right: 16px;
+      }
+      .ant-select-multiple .ant-select-selection-search {
+        margin-inline-start: 0px;
+      }
+  
+      .label-style {
+        font-weight: normal;
+        font-size: 12px;
+        color: #525252;
+        display: block;
+        margin-bottom: 10px;
+      }
+      .filters-btn-field button {
+        width: 32px;
+        height: 32px;
+        border: 1px solid #c4c4c4;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .actions {
+        @media screen and (max-width: 991px) {
+          margin-top: 1rem;
+        }
+        .download-all-btn {
+          // background: #3F51B5;
+          border-radius: 4px;
+          font-weight: normal;
+          font-size: 14px;
+          // color: #FFFFFF;
+          // border-color:#3F51B5 ;
+        }
+      }
+    }
+    [class^='icon-'] {
+      cursor: pointer;
+    }
+    .input-close-icon {
+      font-size: 10px;
+      margin-top: 2px;
+    }
+    .icon-calendar {
+      font-size: 17px;
+      color: #7e84a3;
+    }
+    .icon-filters {
+      font-size: 13px;
+      color: #cecece;
+    }
+  
+    .table-wrapper {
+      margin-top: 1.5rem;
+      background: #ffffff;
+    }
+    &.admin-demographic-page {
+      .filters {
+        .filters-field {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  
+  .filters-wrapper {
+    // &.responses-filters {
+    //   @media screen and (min-width: 1401px) {
+    //     align-items: flex-end;
+    //   }
+    //   @media screen and (max-width: 1400px) {
+    //     flex-direction: column;
+    //     align-items: flex-start;
+    //     .filters {
+    //       margin-bottom: 1rem;
+    //     }
+    //   }
+    // }
+    // &.invoice-filters {
+    //   @media screen and (min-width: 1401px) {
+    //     align-items: flex-end;
+    //   }
+    //   @media screen and (max-width: 1400px) {
+    //     flex-direction: column;
+    //     align-items: flex-start;
+    //     .filters {
+    //       margin-bottom: 1rem;
+    //     }
+    //   }
+    // }
+    // &.invoices-tabs-filters {
+    //   @media screen and (min-width: 1201px) {
+    //     align-items: flex-end;
+    //   }
+    //   @media screen and (max-width: 1200px) {
+    //     flex-direction: column;
+    //     align-items: flex-start;
+    //     .filters {
+    //       margin-bottom: 1rem;
+    //     }
+    //   }
+    // }
+    //  survey admin filters
+    // &.survey-admin-filters {
+    //   @media screen and (min-width: 1260px) {
+    //     align-items: flex-end;
+    //   }
+    //   @media screen and (max-width: 1259px) {
+    //     flex-direction: column;
+    //     align-items: flex-start;
+    //     .filters {
+    //       margin-bottom: 1rem;
+    //     }
+    //   }
+    // }
+  }
+  
+  .select-down-icon {
+    color: #161616;
+    font-size: 6px;
+  }
+  .filters {
+    .ant-select-arrow {
+      @extend .d-flex, .align-items-center, .justify-content-center;
+      width: 14px;
+      height: 14px;
+    }
+    .ant-select-multiple .ant-select-selection-item {
+      margin-top: 0px;
+      background: transparent;
+      border: none;
+    }
+  }
+  
+  .down-arrow-btn {
+    padding: 7px 10px 7px 16px !important;
+    @extend .d-flex, .align-items-center;
+    border-radius: 4px;
+    .select-down-icon {
+      color: #fff;
+    }
+  }
+  .table-content-wrapper {
+    margin-bottom: 24px;
+  }
+  
+  // responsive scss
+  
+  .filters-wrapper {
+    &.survey-admin-filters {
+      @media screen and (min-width: 1350px) {
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+      @media screen and (max-width: 1349px) {
+        flex-direction: column;
+        .filters {
+          width: 100%;
+          @media screen and (max-width: 576px) {
+            flex-direction: column;
+          }
+          .search-field {
+            @media screen and (min-width: 576px) and (max-width: 1349px) {
+              width: calc(45% - 16px);
+            }
+            @media screen and (max-width: 576px) {
+              width: 100%;
+              margin-right: 0;
+            }
+          }
+  
+          .sa-filters-btn-wrapper {
+            display: flex;
+            align-items: flex-end;
+            @media screen and (min-width: 576px) and (max-width: 1349px) {
+              width: 60%;
+            }
+            @media screen and (max-width: 576px) {
+              width: 100%;
+              margin-left: 0;
+            }
+  
+            .assessment-close-date {
+              width: calc(100% - 50px);
+              .filters-input-style {
+                width: 100%;
+              }
+            }
+            .filters-btn-field {
+              margin-right: 0;
+            }
+          }
+        }
+        .buttons-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+          button {
+            flex: 1;
+          }
+        }
+      }
+      .sa-filters-btn-wrapper {
+        display: flex;
+        align-items: flex-end;
+        width: 270px;
+        .assessment-close-date {
+          width: calc(100% - 50px);
+          .filters-input-style {
+            width: 100%;
+          }
+        }
+      }
+    }
+  
+    &.report-requests {
+      .filters {
+        .select-field-and-filter-btn-wrapper {
+          display: flex;
+          align-items: flex-end;
+        }
+      }
+      @media screen and (min-width: 1201px) {
+        justify-content: space-between;
+        align-items: flex-end;
+        .filters {
+          .rr-filters-field {
+            width: 200px;
+            .ant-select-selector {
+              width: 100%;
+            }
+          }
+          .rr-range-picker {
+            width: 250px;
+          }
+          .select-field-and-filter-btn-wrapper {
+            width: 264px;
+            .rr-filters-field-wrapper {
+              width: calc(100% - 64px);
+            }
+            .filters-btn-field {
+              width: 48px;
+              margin-left: auto;
+            }
+          }
+        }
+      }
+      @media screen and (max-width: 1200px) {
+        flex-direction: column;
+        .filters {
+          flex-wrap: wrap;
+          .search-field {
+            @media screen and (min-width: 577px) and (max-width: 1200px) {
+              width: 25%;
+            }
+            @media screen and (max-width: 576px) {
+              width: 100%;
+              margin-right: 0;
+            }
+          }
+          .rr-range-picker-wrapper {
+            @media screen and (min-width: 577px) and (max-width: 1200px) {
+              width: calc(40% - 16px);
+            }
+            @media screen and (max-width: 576px) {
+              width: 100%;
+              margin-right: 0;
+            }
+            .rr-range-picker {
+              width: 100%;
+            }
+          }
+          .select-field-and-filter-btn-wrapper {
+            @media screen and (min-width: 577px) and (max-width: 1200px) {
+              width: calc(35% - 16px);
+            }
+            @media screen and (max-width: 576px) {
+              width: 100%;
+            }
+  
+            .rr-filters-field-wrapper {
+              width: calc(100% - 48px);
+            }
+            .filters-btn-field {
+              width: 32px;
+              margin-left: auto;
+            }
+            .rr-filters-field {
+              width: 100%;
+              .ant-select-selector {
+                width: 100%;
+              }
+            }
+            .filters-btn-field {
+              margin-right: 0;
+              display: flex;
+              justify-content: flex-end;
+            }
+          }
+        }
+        .actions {
+          margin-top: 1rem;
+          display: flex;
+          width: 100%;
+          &.downloadall-btn-wrapper {
+            button {
+              flex: 1;
+            }
+          }
+        }
+      }
+    }
+  
+    &.invoices-tabs-filters {
+      .status-field-and-filters-btn-wrapper {
+        display: flex;
+        align-items: flex-end;
+      }
+      @media screen and (min-width: 1401px) {
+        justify-content: space-between;
+        align-items: flex-end;
+        .show-archived-switch {
+          margin-right: 10px;
+        }
+        .status-field-and-filters-btn-wrapper {
+          width: 264px;
+          .status-filter-field {
+            width: calc(100% - 64px);
+            .filters-select-style {
+              width: 100%;
+              .ant-select-selector {
+                width: 100%;
+              }
+            }
+          }
+        }
+        .date-range-filters {
+          width: 300px;
+        }
+      }
+      @media screen and (max-width: 1400px) {
+        flex-direction: column;
+        .filters {
+          @media screen and (max-width: 767px) {
+            flex-wrap: wrap;
+          }
+          .search-field {
+            @media screen and (min-width: 768px) and (max-width: 1400px) {
+              width: calc(25% - 16px);
+            }
+            @media screen and (max-width: 767px) {
+              width: 100%;
+              margin-right: 0;
+            }
+          }
+          .date-range-filters {
+            @media screen and (min-width: 768px) and (max-width: 1400px) {
+              width: calc(40% - 16px);
+            }
+            @media screen and (max-width: 767px) {
+              width: 100%;
+              margin-right: 0;
+            }
+            .filters-input-style {
+              width: 100%;
+            }
+          }
+          .status-field-and-filters-btn-wrapper {
+            @media screen and (min-width: 768px) and (max-width: 1400px) {
+              width: 35%;
+            }
+            @media screen and (max-width: 767px) {
+              width: 100%;
+            }
+            .status-filter-field {
+              width: calc(100% - 52px);
+              .filters-select-style {
+                width: 100%;
+                .ant-select-selector {
+                  width: 100%;
+                }
+              }
+            }
+            .filters-btn-field {
+              margin-right: 0;
+            }
+          }
+        }
+        .actions {
+          .show-archived-switch {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+            flex: 1;
+            button {
+              flex: none;
+            }
+          }
+          margin-top: 1rem;
+          margin-left: auto;
+          @media screen and (max-width: 576px) {
+            display: flex;
+            width: 100%;
+            button {
+              flex: 1;
+            }
+          }
+        }
+      }
+    }
+  
+    &.responses-filters {
+      .demographic-questions-and-filters-btn {
+        display: flex;
+        align-items: flex-end;
+      }
+      @media screen and (min-width: 1871px) {
+        justify-content: space-between;
+        align-items: flex-end;
+        .filters {
+          .date-range-filters-wrapper {
+            width: 300px;
+          }
+          .date-range-filters {
+            width: 100%;
+          }
+        }
+        .show-cleared-switch {
+          margin-right: 10px;
+        }
+      }
+      @media screen and (max-width: 1870px) {
+        flex-direction: column;
+        .filters {
+          @media screen and (max-width: 1200px) {
+            flex-wrap: wrap;
+          }
+          .search-field {
+            @media screen and (min-width: 1201px) {
+              width: calc(20% - 16px);
+            }
+            @media screen and (min-width: 577px) and (max-width: 1200px) {
+              width: calc(30% - 16px);
+            }
+            @media screen and (max-width: 576px) {
+              width: 100%;
+              margin-right: 0;
+            }
+          }
+          .date-range-filters-wrapper {
+            @media screen and (min-width: 1201px) {
+              width: calc(25% - 16px);
+            }
+            @media screen and (min-width: 577px) and (max-width: 1200px) {
+              width: calc(40% - 16px);
+            }
+            @media screen and (max-width: 576px) {
+              width: 100%;
+              margin-right: 0;
+              .date-range-filters {
+                width: 100%;
+              }
+            }
+          }
+          .completed-filters,
+          .languages-filters {
+            @media screen and (min-width: 1201px) {
+              width: calc(15% - 16px);
+            }
+            .filters-select-style {
+              width: 100%;
+              .ant-select-selector {
+                width: 100%;
+              }
+            }
+          }
+          .completed-filters {
+            @media screen and (min-width: 577px) and (max-width: 1200px) {
+              width: 30%;
+              margin-right: 0;
+            }
+            @media screen and (max-width: 576px) {
+              width: 100%;
+              margin-right: 0;
+            }
+          }
+          .languages-filters {
+            @media screen and (min-width: 577px) and (max-width: 1200px) {
+              width: calc(40% - 16px);
+            }
+            @media screen and (max-width: 576px) {
+              width: 100%;
+              margin-right: 0;
+            }
+          }
+  
+          .demographic-questions-and-filters-btn {
+            @media screen and (min-width: 1201px) {
+              width: 25%;
+            }
+            @media screen and (min-width: 577px) and (max-width: 1200px) {
+              width: 60%;
+            }
+            @media screen and (max-width: 576px) {
+              width: 100%;
+              margin-right: 0;
+            }
+            .select-field {
+              width: calc(100% - 52px);
+            }
+            .filters-btn-field {
+              margin-right: 0;
+            }
+          }
+        }
+  
+        .actions {
+          margin-top: 1rem;
+          flex-wrap: wrap;
+          @media screen and (min-width: 577px) {
+            justify-content: flex-end;
+          }
+          .show-cleared-switch {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            button {
+              margin-bottom: 0;
+              flex: 1;
+            }
+          }
+          button {
+            margin-bottom: 10px;
+            flex: 1;
+            justify-content: center;
+            &.down-arrow-btn {
+              max-width: 100px;
+            }
+            &.ghost-clear-btn {
+              max-width: 100px;
+            }
+          }
+        }
+      }
+    }
+  
+    &.as-home-filters {
+      .as-type-field-filters-btn {
+        display: flex;
+        align-items: flex-end;
+      }
+      @media screen and (min-width: 1341px) {
+        justify-content: space-between;
+        align-items: flex-end;
+        .as-status-field,
+        .as-type-field {
+          width: 200px;
+          .filters-select-style {
+            width: 100%;
+            .ant-select-selector {
+              width: 100%;
+            }
+          }
+        }
+      }
+      @media screen and (max-width: 1340px) {
+        flex-direction: column;
+        .filters {
+          @media screen and (max-width: 767px) {
+            flex-wrap: wrap;
+          }
+          .search-field {
+            @media screen and (min-width: 768px) and (max-width: 1340px) {
+              width: calc(30% - 16px);
+            }
+            @media screen and (min-width: 577px) and (max-width: 767px) {
+              width: calc(50% - 16px);
+            }
+            @media screen and (max-width: 576px) {
+              width: 100%;
+              margin-right: 0;
+            }
+          }
+          .online-filters-field,
+          .as-status-field {
+            .filters-select-style {
+              width: 100%;
+              .ant-select-selector {
+                width: 100%;
+              }
+            }
+          }
+          // .online-filters-field {
+          //   @media screen and (min-width: 768px) and (max-width: 1340px) {
+          //     width: calc(30% - 16px);
+          //   }
+          //   @media screen and (min-width: 577px) and (max-width: 767px) {
+          //     width: 50%;
+          //     margin-right: 0;
+          //   }
+          //   @media screen and (max-width: 576px) {
+          //     width: 100%;
+          //     margin-right: 0;
+          //   }
+          // }
+          .as-status-field {
+            @media screen and (min-width: 768px) and (max-width: 1340px) {
+              width: calc(30% - 16px);
+            }
+            @media screen and (min-width: 577px) and (max-width: 767px) {
+              width: 50%;
+              margin-right: 0;
+            }
+            @media screen and (max-width: 576px) {
+              width: 100%;
+              margin-right: 0;
+            }
+          }
+          .as-type-field-filters-btn {
+            @media screen and (min-width: 768px) and (max-width: 1340px) {
+              width: 40%;
+            }
+            @media screen and (min-width: 577px) and (max-width: 767px) {
+              width: 100%;
+              margin-right: 0;
+            }
+            @media screen and (max-width: 576px) {
+              width: 100%;
+              margin-right: 0;
+            }
+            .as-type-field {
+              width: calc(100% - 48px);
+              .filters-select-style,
+              .ant-select-selector {
+                width: 100%;
+              }
+            }
+            .filters-btn-field {
+              margin-right: 0;
+            }
+          }
+        }
+  
+        .actions {
+          margin-top: 1rem;
+          display: flex;
+          width: 100%;
+          justify-content: flex-end;
+          @media screen and (max-width: 767px) {
+            button {
+              flex: 1;
+              display: flex;
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  
+    &.draft-assessments-filters {
+      .asd-type-field-filters-btn {
+        display: flex;
+        align-items: flex-end;
+      }
+      @media screen and (min-width: 1341px) {
+        justify-content: space-between;
+        align-items: flex-end;
+        .asd-status-filters-field,
+        .asd-type-filters-field {
+          width: 200px;
+          .filters-select-style {
+            width: 100%;
+            .ant-select-selector {
+              width: 100%;
+            }
+          }
+        }
+        .range-picker-filters-field {
+          width: 250px;
+        }
+      }
+      @media screen and (max-width: 1340px) {
+        flex-direction: column;
+        .filters {
+          flex-wrap: wrap;
+          .search-field {
+            @media screen and (min-width: 577px) and (max-width: 1340px) {
+              width: calc(50% - 16px);
+            }
+            @media screen and (max-width: 576px) {
+              width: 100%;
+              margin-right: 0;
+            }
+          }
+          .range-picker-filters-field {
+            @media screen and (min-width: 577px) and (max-width: 1340px) {
+              width: 50%;
+              margin-right: 0;
+            }
+            @media screen and (max-width: 576px) {
+              width: 100%;
+              margin-right: 0;
+            }
+  
+            .filters-input-style {
+              width: 100%;
+            }
+          }
+          .asd-status-filters-field {
+            @media screen and (min-width: 577px) and (max-width: 1340px) {
+              width: calc(50% - 16px);
+            }
+            @media screen and (max-width: 576px) {
+              width: 100%;
+              margin-right: 0;
+            }
+  
+            .filters-select-style,
+            .ant-select-selector {
+              width: 100%;
+            }
+          }
+          .asd-type-field-filters-btn {
+            @media screen and (min-width: 577px) and (max-width: 1340px) {
+              width: 100%;
+              margin-right: 0;
+            }
+            @media screen and (max-width: 576px) {
+              width: 100%;
+              margin-right: 0;
+            }
+  
+            .asd-type-filters-field {
+              width: calc(100% - 52px);
+              .filters-select-style,
+              .ant-select-selector {
+                width: 100%;
+              }
+            }
+            .filters-btn-field {
+              margin-right: 0;
+            }
+          }
+        }
+        .buttons-wrapper {
+          .download-all-btn {
+            display: flex !important;
+            @media screen and (min-width: 577px) {
+              justify-content: flex-end;
+              margin-left: auto;
+            }
+            @media screen and (max-width: 576px) {
+              width: 100%;
+              justify-content: center;
+              button {
+                width: 100%;
+              }
+              button {
+                flex: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    &.invoice-filters {
+      .status-type-field-filters-btn {
+        display: flex;
+        align-items: flex-end;
+      }
+      .show-archived-switch {
+        margin-right: 10px;
+      }
+      @media screen and (min-width: 1401px) {
+        justify-content: space-between;
+        align-items: flex-end;
+        .from-to-filters-field {
+          width: 250px;
+        }
+        .status-type-field-filters-btn {
+          .select-field {
+            width: 150px;
+            .filters-select-style,
+            .ant-select-selector {
+              width: 100%;
+            }
+          }
+        }
+      }
+      @media screen and (max-width: 1400px) {
+        flex-direction: column;
+        .filters {
+          @media screen and (max-width: 767px) {
+            flex-wrap: wrap;
+          }
+          .search-field {
+            @media screen and (min-width: 768px) and (max-width: 1400px) {
+              width: calc(30% - 16px);
+            }
+            @media screen and (max-width: 767px) {
+              width: 100%;
+              margin-right: 0;
+            }
+          }
+          .from-to-filters-field {
+            @media screen and (min-width: 768px) and (max-width: 1400px) {
+              width: calc(40% - 16px);
+            }
+            @media screen and (max-width: 767px) {
+              width: 100%;
+              margin-right: 0;
+            }
+            .filters-input-style {
+              width: 100%;
+            }
+          }
+          .status-type-field-filters-btn {
+            @media screen and (min-width: 768px) and (max-width: 1400px) {
+              width: 30%;
+            }
+            @media screen and (max-width: 767px) {
+              width: 100%;
+              margin-right: 0;
+            }
+            .select-field {
+              width: calc(100% - 52px);
+              .filters-select-style,
+              .ant-select-selector {
+                width: 100%;
+              }
+            }
+            .filters-btn-field {
+              margin-right: 0;
+            }
+          }
+        }
+        .actions {
+          display: flex;
+          justify-content: flex-end;
+          @media screen and (min-width: 768px) and (max-width: 1400px) {
+            margin-top: 1rem;
+          }
+          @media screen and (max-width: 767px) {
+            flex-wrap: wrap;
+            width: 100%;
+            .show-archived-switch {
+              display: flex;
+              align-items: center;
+              min-width: 152px;
+              button {
+                flex: none;
+                margin-top: 0;
+              }
+            }
+            button,
+            .show-archived-switch {
+              flex: 1;
+              margin-top: 1rem;
+            }
+          }
+        }
+      }
+    }
+    &.ca-survey-admin-filters {
+      @media screen and (min-width: 992px) {
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+      @media screen and (max-width: 991px) {
+        flex-direction: column;
+        .search-field.filters-field {
+          width: 100%;
+        }
+        .sa-filters-btn-wrapper {
+          .filters-btn-field {
+            margin-right: 0;
+          }
+        }
+        .buttons-wrapper {
+          display: flex;
+          width: 100%;
+          button {
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+  
+  .collaborator-filters-wrapper {
+    @media screen and (min-width: 577px) {
+      align-items: flex-end;
+    }
+    @media screen and (max-width: 576px) {
+      flex-direction: column;
+      .search-field {
+        width: 100%;
+        .collaborator-search {
+          width: 100%;
+        }
+      }
+      .ant-btn {
+        margin-top: 1rem;
+        width: 100%;
+      }
+    }
+  }
+  .leaders-admin-filters-wrapper {
+    @extend .d-flex;
+    border: 1px solid #e7e7e7;
+    margin-top: 27px;
+    @media screen and (min-width: 577px) {
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    @media screen and (max-width: 576px) {
+      flex-direction: column;
+      padding: 0 1rem 1rem;
+    }
+    .filters {
+      &.leaders-admin-filters {
+        @extend .d-flex;
+        @media screen and (min-width: 577px) {
+          justify-content: space-between;
+        }
+        .search-field.filters-field {
+          @media screen and (max-width: 576px) {
+            width: calc(100% - 62px);
+          }
+        }
+        align-items: flex-end;
+      }
+    }
+    .buttons-wrapper {
+      @media screen and (max-width: 576px) {
+        display: flex;
+        width: 100%;
+        button {
+          flex: 1;
+        }
+      }
+    }
+  }
+  .disable-color-black button {
+    color: rgba(0, 0, 0, 0.25) !important;
+  }
+  
+  // clients filters
+  .filters-wrapper {
+    &.clients-filters-wrapper {
+      .filters {
+        flex-wrap: wrap;
+      }
+    }
+  }
+  
